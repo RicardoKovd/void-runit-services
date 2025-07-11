@@ -1,0 +1,5 @@
+#!/bin/sh
+
+chpst -e "$TURNSTILE_ENV_DIR" sv check x11-survival >/dev/null
+
+exec chpst -e "$TURNSTILE_ENV_DIR" -b redshiftd redshift -t 5800:3400 -l 24.69:108.05 2>&1

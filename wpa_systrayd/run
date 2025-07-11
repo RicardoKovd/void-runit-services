@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Must be wait for gui startup
+chpst -e "$TURNSTILE_ENV_DIR" sv check x11-survival >/dev/null || exit 1
+
+[ -r ./conf ] && . ./conf
+
+exec chpst -e "$TURNSTILE_ENV_DIR" wpa_gui -t 2>&1

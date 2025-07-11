@@ -1,0 +1,5 @@
+#!/bin/sh
+
+chpst -e "$TURNSTILE_ENV_DIR" sv check x11-survival >/dev/null
+
+exec chpst -e "$TURNSTILE_ENV_DIR" -b flameshotd flameshot

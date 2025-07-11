@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Must be wait for gui startup
+chpst -e "$TURNSTILE_ENV_DIR" sv check x11-survival >/dev/null || exit 1
+
+[ -r ./conf ] && . ./conf
+
+exec chpst -b systrayd -e "$TURNSTILE_ENV_DIR" trayer ${OPTS} 2>&1

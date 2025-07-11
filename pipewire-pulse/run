@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sv check $HOME/.config/service/wireplumber >/dev/null || exit 1
+chpst -e "$TURNSTILE_ENV_DIR" sv check wireplumber >/dev/null || exit 1
 
 [ -r ./conf ] && . ./conf
 

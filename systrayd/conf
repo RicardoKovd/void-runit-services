@@ -1,0 +1,1 @@
+OPTS="--edge top --align right --SetDockType true --SetPartialStrut true --expand true --widthtype request --tint 0x04000c --height 25 --alpha 0 --transparent true -l"
